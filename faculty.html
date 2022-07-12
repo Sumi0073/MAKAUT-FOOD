@@ -20,13 +20,71 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+        .row {
+            padding: 1%;
+        }
+        
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            align-items: center;
+        }
+        
+        .container {
+            padding: 0 16px;
+        }
+        
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .title {
+            color: grey;
+        }
+        
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
         body {
             background: linear-gradient(92.69deg, #82D4F8 5.04%, rgba(255, 255, 255, 0) 53.88%, rgba(157, 222, 249, 0.78125) 77.7%), #FFFFFF;
-            margin: 0;
+            margin: 0%;
         }
         
         img {
-            border-radius: 5%;
+            border-radius: 3%;
         }
         
         .as {
@@ -37,6 +95,50 @@
             font-family: sans-serif;
             margin-left: 2%;
             margin-right: 2%;
+        }
+        
+        .sc {
+            margin: 0;
+            background: #222;
+            color: white;
+        }
+        
+        .contact {
+            padding: 5%;
+            background-color: black;
+            margin: 0;
+        }
+        
+        .contact .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact .row .title {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 30px;
+            padding-bottom: 1%;
+        }
+        
+        .contact .row .info h3 {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: #eee;
+            font-weight: normal;
+        }
+        
+        .contact .row .info h3 i {
+            padding-right: 0;
+            color: var(--yellow);
+        }
+        
+        #map {
+            height: 20%;
+            width: 50%;
         }
     </style>
 </head>
@@ -49,115 +151,136 @@
             </a>
             <a href="#" class="navbar-brand">DEPARTMENT OF FOOD SCIENCE AND TECHNOLOGY, MAKAUT</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
 
                 <div class="navbar-nav ms-auto" id="as">
-                    <a href="#main.html" class="nav-item nav-link active">Home</a>
-                    <a href="#cr7" class="nav-item nav-link">Course</a>
-                    <a href="faculty.html" target="blank" class="nav-item nav-link">Faculty</a>
-                    <a href="#" class="nav-item nav-link">Training and Placement</a>
-                    <a href="#" class="nav-item nav-link">Activity</a>
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link">Course</a>
+                    <a href="faculty2.html" class="nav-item nav-link active">Faculty</a>
+                    <a href="Training and Placement.html" class="nav-item nav-link ">Training and Placement</a>
+                    <a href="Activity.html" class="nav-item nav-link">Activity</a>
                 </div>
 
             </div>
         </div>
     </nav><br>
+
     <div class="row">
-        <div class="col-sm-10" style="padding: 0 0 5% 20%;align-items: center; text-align: center;">
-            <a href="https://docs.google.com/document/d/1TQX2IyHZGqYMJGWPNVlT7FbdbTeRRPwP/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f6.png" width="70%" height="70%">
-            </a>
-            <h3 style="color: red"><b> DR. SEBAK RANJAN ROY           
-            </b></h3>
-            <h3>Head of the Department</h3>
-            <h4 style="color:blue"> roy_sebak@rediffmail.com</h4>
+        <div class="column">
+            <div class="card">
+                <img src="f7.png" alt="SONIA KUNDU" style="width:80%">
+                <div class="container">
+                    <h2>DR. SONIA KUNDU </h2>
+                    <p class="title">Head of the Department</p>
+
+                    <p><i class="fa fa-envelope" style="color:red"></i> sonia.kundu@makautwb.ac.in</p>
+                    <p><a href="facultyport7.html"><button class="button">About</button></a></p>
+                </div>
+            </div>
         </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="f4.png" alt="NILADRI CHAKRABORTY" style="width:80%">
+                <div class="container">
+                    <h2> DR. NILADRI CHAKRABORTY </h2>
+                    <p class="title">Assistant Professor</p>
+
+                    <p><i class="fa fa-envelope" style="color:red"></i> niladri.chakraborty75@yahoo.co.in</p>
+                    <p><a href="facultyport2.html"><button class="button">About</button></a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="fa-2.png" alt="ANJU PAUL" style="width:80%">
+                <div class="container">
+                    <h2>DR. ANJU PAUL </h2>
+                    <p class="title">Assistant Professor</p>
+
+                    <p><i class="fa fa-envelope" style="color:red"></i> dranjupaulmakaut@gmail.com</p>
+                    <p><a href="facultyport4.html"><button class="button">About</button></a></p>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
     <div class="row">
-        <div class="col-sm-3" style="padding: 0 0 5% 0; align-items: center; text-align: center;">
-            <a href="https://docs.google.com/document/d/17YIvU1KkCLPfl6Em3TQn9NhVL-0IcUT0/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="fa-2.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b> DR. ANJU PAUL           
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue"> dranjupaulmakaut@gmail.com</h4>
+
+        <div class="column">
+            <div class="card">
+                <img src="fa1.png" alt="MOUSUMI SAHA" style="width:80%">
+                <div class="container">
+                    <h2> DR. MOUSUMI SAHA (GHOSH) </h2>
+                    <p class="title">Assistant Professor</p>
+
+                    <p><i class="fa fa-envelope" style="color:red"></i> mousumisaha.ghosh@makaut.ac.in</p>
+                    <p><a href="facultyport5.html"><button class="button">About</button></a></p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-sm-3" style="padding: 0 0 5% 0;align-items: center; text-align: center;">
-            <a href="https://docs.google.com/document/d/15sCfq9dqWTRaNtFo9QgOljjQpfiC__Kt/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f4.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b> DR. NILADRI CHAKRABORTY          
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue"> niladri.chakraborty75@yahoo.co.in</h4>
+        <div class="column">
+            <div class="card">
+                <img src="f3.png" alt="ANIMESH NASKAR" style="width:80%">
+                <div class="container">
+                    <h2>DR. ANIMESH NASKAR </h2>
+                    <p class="title">Assistant Professor</p>
+
+                    <p><i class="fa fa-envelope" style="color:red"></i> animesh.ftbe@gmail.com</p>
+                    <p><a href="facultyport3.html"><button class="button">About</button></a></p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-sm-3" style="padding: 0 0 5% 0; align-items: center; text-align: center;">
-            <a href="https://docs.google.com/document/d/1gkL3q6eBgV5R-1jai5lyO2nOEHLttUWv/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f5.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b>   DR. DEBASREE DEB (GHOSH)           
-            </b></h3>
-            <h3>Assistant Professor
-            </h3>
-            <h4 style="color:blue"> E-mail-debasreesrf@gmail.com</h4>
-        </div>
+        <div class="column">
+            <div class="card">
+                <img src="f8.png" alt="SUSMITA CHANDRA" style="width:80%">
+                <div class="container">
+                    <h2>DR. SUSMITA CHANDRA </h2>
+                    <p class="title">Assistant Professor</p>
 
-        <div class="col-sm-3" style="padding: 0 0 5% 0; align-items: center; text-align: center;">
-            <a href="https://docs.google.com/document/d/151CK8rxFlJXD3LaNcTyUWbS3cssdognL/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="fa1.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b> DR. MOUSUMI SAHA (GHOSH)     
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue"> mousumisaha.ghosh@makaut.ac.in/</h4>
-        </div>
-
-        <div class="col-sm-3" style="padding: 0 0 5% 0; align-items: center; text-align: center;">
-            <a href="https://docs.google.com/document/d/1tsaDYAm9-hPLioQZ1TG7nkmJ6DyaS_pC/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f3.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b> DR. ANIMESH NASKAR         
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue">animesh.ftbe@gmail.com</h4>
-        </div>
-
-        <div class="col-sm-3" style="padding: 0 0 5% 0;">
-            <a href="https://docs.google.com/document/d/1y9fDM5p0fL6ADWF2QtpDhYJcy1i8zNzb/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f7.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b>DR. SONAI KUNDU
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue"> sonia.kundu@makautwb.ac.in</h4>
-        </div>
-
-        <div class="col-sm-3" style="padding: 0 0 5% 0;">
-            <a href="https://docs.google.com/document/d/1Bfzlkt1yQ9LpmHEV2jUN_aSNJI5jRGFk/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f8.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b>DR. SUSMITA CHANDRA          
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue"> susmitachandra2506@gmail.com</h4>
-        </div>
-
-        <div class="col-sm-3" style="padding: 0 0 5% 0;">
-            <a href="https://docs.google.com/document/d/1PiuhfiTAtQZ4SdlzE1RS2ogVLTXA16VR/edit?usp=sharing&ouid=116905466162769483848&rtpof=true&sd=true">
-                <img src="f9.png" width="80%" height="80%">
-            </a>
-            <h3 style="color: red"><b>DR. SAGARIKA CHAKRABORTY          
-            </b></h3>
-            <h3>Assistant Professor</h3>
-            <h4 style="color:blue">sagarikachakraborty82@gmail.com</h4>
+                    <p><i class="fa fa-envelope" style="color:red"></i>susmitachandra2506@gmail.com</p>
+                    <p><a href="facultyport6.html"><button class="button">About</button></a></p>
+                </div>
+            </div>
         </div>
 
 
+    </div>
+
+
+
+
+    </div>
+    <div class="contact">
+
+        <div class="row">
+
+            <h3 class="title">contact info</h3>
+
+            <div class="col-sm-4 info">
+                <p><br></p>
+                <h3> <i class="fas fa-envelope" style="color: rgb(221, 1, 1);"></i> fst.makautofficial.com</h3>
+                <h3> <i class="fas fa-phone" style="color: rgb(32, 20, 206);"></i> +91 9775903854 </h3>
+                <h3> <i class="fas fa-map-marker-alt" style="color: rgb(185, 9, 9);"></i><br> NH-12 (Old NH-34) Simhat<br> Haringhata, Nadia 741249, West Bengal </h3>
+            </div>
+            <div class="col-sm-8" align="right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58780.79115780857!2d88.54313!3d22.957612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3cbdf3b9f157e355!2sMAKAUT%20MAIN%20CAMPUS!5e0!3m2!1sen!2sus!4v1646855671418!5m2!1sen!2sus" width="400"
+                    height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+            </div>
+        </div>
+
+    </div>
+    <div class="sc">
+        <h5 style="padding-left: 2%; text-align: left;"> &#64;2022 Copyright of FOOD SCIENCE AND TECHNOLOGY, MAKAUT &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Designed
+            by Sumi Chatterjee and Aditya Dutta </h5>
     </div>
 </body>
 
